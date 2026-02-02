@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "profiles": {
+    "steel_plate_standard": {
+      "description": "基于「标准模板 - 钢板」批量创建钢板物料（低上下文：run_python_code 一次完成）。",
+      "template_doctype": "Item Parameter Template",
+      "template_name": "标准模板 - 钢板",
+      "target_doctype": "Item",
+      "mode_default": "upsert",
+      "id_field": "custom_unique_item_name",
+      "hash_field": "custom_param_hash",
+      "id_format": "PLATE-{{ 材质 }}-T{{ 厚度 }}-{{ 宽度 }}x{{ 长度 }}",
+      "uom_rules": [
+        {
+          "uom": "千克",
+          "conversion_factor": 1
+        },
+        {
+          "uom": "吨",
+          "conversion_factor": 1000
+        },
+        {
+          "uom": "米",
+          "conversion_factor_expr": "{{ 理论米重|float }}"
+        },
+        {
+          "uom": "张",
+          "conversion_factor_expr": "{{ 理论单重|float }}"
+        }
+      ]
+    },
+    "reducer_standard": {
+      "description": "基于「标准模板 - 减速机」创建减速机物料（示例：摆线针轮减速机）。",
+      "template_doctype": "Item Parameter Template",
+      "template_name": "标准模板 - 减速机",
+      "target_doctype": "Item",
+      "mode_default": "upsert",
+      "id_field": "custom_unique_item_name",
+      "hash_field": "custom_param_hash",
+      "id_format": "REDUCER-{{ 系列型号 }}-{{ 机座规格|replace(' ','_') }}-i{{ 公称速比i }}-{{ 装配形式 }}-{{ 品牌 }}"
+    }
+  }
+}
+

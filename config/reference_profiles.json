@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "profiles": {
+    "default": {
+      "description": "新组员上手默认 reference：Company / Item Group / UOM（MCP 只读拉取）",
+      "items": [
+        {
+          "id": "companies",
+          "script": "scripts/fac_mcp_list_companies.py",
+          "args": {
+            "limit": 50,
+            "fields": "name,abbr,default_currency,country"
+          },
+          "out": "companies.json"
+        },
+        {
+          "id": "item_groups",
+          "script": "scripts/fac_mcp_list_item_groups.py",
+          "args": {
+            "limit": 200,
+            "fields": "item_group_name,parent_item_group,custom_description,custom_standard_tax_rate,custom_code,is_group,image"
+          },
+          "out": "item_groups.json"
+        },
+        {
+          "id": "uoms",
+          "script": "scripts/fac_mcp_list_uoms.py",
+          "args": {
+            "limit": 200
+          },
+          "out": "uoms.json"
+        }
+      ]
+    }
+  }
+}
+

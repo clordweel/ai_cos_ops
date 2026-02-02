@@ -1,0 +1,11 @@
+# 仅用于记录“源码参考地址”（可提交，不含密钥）
+# 注意：AI Agent 可能无法直接从 URL 读取源码；需要把仓库 clone 到工作区或提供文件内容。
+
+cos_repo_url: "https://github.com/clordweel/cos"
+frappe_assistant_core_repo_url: "https://github.com/buildswithpaul/Frappe_Assistant_Core"
+raven_repo_url: "https://github.com/The-Commit-Company/raven"
+
+frappe_repo_url: "https://github.com/frappe/frappe"
+erpnext_repo_url: "https://github.com/frappe/erpnext"
+hrms_repo_url: "https://github.com/frappe/hrms"
+

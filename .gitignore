@@ -1,0 +1,38 @@
+# --- secrets / local config (NEVER COMMIT) ---
+config/secrets.local.yaml
+config/secrets.local.*.yaml
+*.local.yaml
+.env
+.env.*
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Logs / temp ---
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# --- Local cache (do not commit) ---
+cache/**
+!cache/README.md
+
+# --- Developer workdir (do not commit) ---
+work/**
+!work/README.md
+
+# --- Cursor (keep rules, ignore cache/index) ---
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
+!.cursor/skills/
+!.cursor/skills/**
+!.cursor/commands/
+!.cursor/commands/**
+

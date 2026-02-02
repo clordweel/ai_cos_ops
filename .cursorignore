@@ -1,0 +1,16 @@
+# Cursor ignore file (same syntax as .gitignore)
+
+# Never index local secrets
+config/secrets.local.yaml
+config/secrets.local.*.yaml
+.env
+.env.*
+
+# Noise
+*.log
+*.tmp
+__pycache__/
+.pytest_cache/
+
+cache/
+config/secrets.example.yaml

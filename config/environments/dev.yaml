@@ -1,0 +1,22 @@
+env: dev
+label: DEV
+
+# 人类可读说明（可选）
+description: "开发环境：允许写入（仍需 preflight），用于功能开发与演练"
+
+# Frappe 站点（浏览器访问地址）
+site_url: "https://cos-dev.junhai.work"
+
+# REST API 基础地址（通常与 site_url 同源）
+rest_base_url: "https://cos-dev.junhai.work"
+
+# Frappe_Assistant_Core（FAC MCP）Endpoint（StreamableHTTP / JSON-RPC）
+# 参考：docs/source-references.md 与 FAC README
+mcp_base_url: "https://cos-dev.junhai.work/api/method/frappe_assistant_core.api.fac_endpoint.handle_mcp"
+
+#（可选）用于快速识别是否填错环境
+expected_host_contains: "cos-dev.junhai.work"
+
+#（可选）如果你需要记录服务器地址（比如 SSH/网关），放这里（不含密码）
+server_host: "dev-server.example.internal"
+
